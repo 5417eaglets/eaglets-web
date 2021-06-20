@@ -9,12 +9,16 @@ body {
     font-size:18px;
     color:black;
     font-weight:500;
+    height:100%;
 }
 .navbarCC {
+    position:absolute;
+    top:0;
     height:auto;
     width:100%;
     background-color:white;
     border-bottom:1px solid black;
+    z-index:99;
 }
 .navbarC {
     display:grid;
@@ -59,11 +63,13 @@ body {
     color:white;
 }
 .navbarDropdownC {
+    position:absolute;
     list-style-type:none;
     margin:0;
     padding:0;
     text-align:center;
     width:auto;
+    z-index:1;
 }
 .navDropItem {
     background-color:#1A8AEC;
