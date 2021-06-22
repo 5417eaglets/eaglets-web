@@ -108,3 +108,25 @@ $("body").on("mousemove", function () {
     }
 });
 /*End of navbar code*/
+/*Start of footer code*/
+$("#socialIcon1").on("mouseenter", function () {
+    $("#socialI1").removeClass("fa-envelope");
+    $("#socialI1").removeClass("fa-envelope-open");
+    $("#socialI1").addClass("fa-envelope-open");
+});
+$("#socialIcon1").on("mouseleave", function () {
+    $("#socialI1").removeClass("fa-envelope");
+    $("#socialI1").removeClass("fa-envelope-open");
+    $("#socialI1").addClass("fa-envelope");
+});
+$("#socialIcon2").on("mouseenter", function () {
+    $("#socialI2").removeClass("fa-instagram");
+    $("#socialI2").removeClass("fa-instagram-square");
+    $("#socialI2").addClass("fa-instagram-square");
+});
+$("#socialIcon2").on("mouseleave", function () {
+    $("#socialI2").removeClass("fa-instagram");
+    $("#socialI2").removeClass("fa-instagram-square");
+    $("#socialI2").addClass("fa-instagram");
+});
+/*End of footer code*/

@@ -128,6 +128,7 @@ body {
     margin-left:auto;
     padding:24px 30px;
     background-color:white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .cBoxTitle {
     text-align:center;
@@ -162,4 +163,114 @@ body {
     background-color:#1A8AEC;
     color:white;
     user-select:none;
+}
+.contentB {
+    padding:30px 0px;
+    background-color:rgb(179,231,233);
+}
+.contentBanner {
+    display:grid;
+    grid-template-columns:70% 30%;
+    margin-right:auto;
+    margin-left:auto;
+    width:70%;
+    color:black;
+}
+.centerC {
+    display:grid;
+    grid-template-columns:auto;
+    align-content:center;
+}
+.contentTxt {
+    font-size:38px;
+    font-weight:700;
+}
+.contentBtn {
+    padding:14px;
+    border-radius:40px;
+    border:5px solid black;
+    color:black;
+    text-align:center;
+    font-size:30px;
+    font-weight:700;
+    width:350px;
+    cursor:pointer;
+}
+.contentBtn:hover {
+    background-color:#1A8AEC;
+    color:white;
+    user-select:none;
+}
+.contentBanner2 {
+    margin-right:auto;
+    margin-left:auto;
+    width:45%;
+}
+.contentTxt2 {
+    text-align:center;
+    color:black;
+    font-size:42px;
+    font-weight:700;
+    margin:10px 0px;
+}
+.roboTeamLogo {
+    margin-left:auto;
+    margin-right:auto;
+    width:100%;
+    height:auto;
+}
+.footer {
+    width:100%;
+    height:35%;
+    color:black;
+    background-color:rgb(187,188,188);
+    padding:30px 0px;
+}
+.footerC {
+    display:grid;
+    grid-template-columns:25% 25% 28% 22%;
+    margin-right:auto;
+    margin-left:auto;
+    width:70%;
+}
+.footerH {
+    font-size: 32px;
+    font-weight:700;
+    margin:0;
+    margin:0px 0px 12px 0px;
+}
+.footerGroup ul {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+.footerGroup ul li {
+    margin-top:10px;
+    font-weight:500;
+    font-size:20px;
+}
+.pageLink {
+    text-decoration:none;
+    color:black;
+}
+.pageLink:hover {
+    text-decoration:underline;
+}
+.socialC {
+    display:grid;
+    grid-template-columns:33% 33% 33%;
+    align-content:center;
+    width:100%;
+    height:auto;
+    margin:0;
+}
+.socialLink {
+    text-decoration:none;
+    color:black;
+}
+.socialLink i {
+    font-size:50px;
+}
+#socialG {
+    width:70%;
 }
