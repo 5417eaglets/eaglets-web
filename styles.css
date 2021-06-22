@@ -274,3 +274,35 @@ body {
 #socialG {
     width:70%;
 }
+/*start of styles first used on the about us page*/
+.mHTxt2C {
+    position:absolute;
+    top:40%;
+    left:0;
+    width:100%;
+}
+.mHTxt2 {
+    text-align:center;
+    color:white;
+    font-weight:700;
+    font-size:6vw;
+    background-color:rgba(0,0,0,0);
+}
+.contentBox2 {
+    width:68%;
+    margin-right:auto;
+    margin-left:auto;
+}
+.contentB2 {
+    text-align:center;
+    padding:30px 0px;
+    padding-bottom:46px;
+    background-image:linear-gradient(135deg, rgb(37,205,254), rgb(93,133,254));
+}
+.contentTxt2 {
+    width:68%;
+    font-size:38px;
+    font-weight:700;
+    margin-right:auto;
+    margin-left:auto;
+}
