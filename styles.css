@@ -306,3 +306,53 @@ body {
     margin-right:auto;
     margin-left:auto;
 }
+/*start of styles first used on the leadership page*/
+.contentFlexC {
+    background-color:rgb(239,251,252);
+    width:100%;
+    height:auto;
+    padding:0px 0px 70px;
+}
+.contentFlex {
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    width:76%;
+    height:auto;
+    margin-right:auto;
+    margin-left:auto;
+    align-items:center;
+    justify-content:center;
+}
+.profile {
+    height:485px;
+    width:375px;
+    border:1px solid black;
+    overflow:hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top:70px;
+    margin-right:70px;
+}
+.profile:last-child {
+    margin-right:0px;
+}
+.profileImg {
+    width:100%;
+    height:375px;
+    background-color:rgb(200,55,171);
+}
+.profileCaption {
+    border-top:2px solid black;
+    width:100%;
+    height:110px;
+    margin:0;
+    padding:20px 0px;
+    color:black;
+    font-size:26px;
+    font-weight:500;
+    text-align:center;
+    background-color:white;
+}
+.profilePosition {
+    margin-top:10px;
+}
