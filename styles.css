@@ -446,3 +446,24 @@ body {
 .blueText {
     color:#1A8AEC;
 }
+/*RWD-related styling*/
+@media (max-width: 1569px) {
+    .navbarC {
+        grid-template-columns: 6% 30% auto auto auto auto auto auto auto;
+    }
+}
+@media (max-width: 1360px) {
+    .navbarC {
+        width:100%;
+    }
+}
+@media (max-width: 1294px) {
+    .navbarC {
+        grid-template-columns: auto 24% auto auto auto auto auto auto auto;
+    }
+}
+/*@media (max-width: 1200px) {
+    .navbarC {
+        grid-template-columns: auto 24% auto auto auto auto auto auto auto;
+    }
+}*/

@@ -39,7 +39,7 @@ function clearMLND() {
 function resetDropdowns() {
     for (var index = 0; index < 4; index++) {
         dropDC[index].style.top = `${document.querySelector(".navbarCC").getBoundingClientRect().height - dropDC[index].getBoundingClientRect().height}px`;
-        dropDC[index].style.transition = "top 2s";
+        dropDC[index].style.transition = "top 1s";
     }
 }
 
