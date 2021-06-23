@@ -13,6 +13,12 @@ body {
     font-weight:500;
     height:100%;
 }
+.stickyNavbar {
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:99;
+}
 .navbar {
     user-select:none;
 }
@@ -52,6 +58,7 @@ body {
     width:auto;
     margin-left:auto;
     margin-right:auto;
+    transition:height 1s; 
 }
 #navbarMainT {
     font-size:30px;

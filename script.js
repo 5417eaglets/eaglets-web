@@ -8,6 +8,9 @@ var navDrop1AWidth = document.getElementById("navDrop12").getBoundingClientRect(
 var navDrop2AWidth = document.getElementById("navDrop21").getBoundingClientRect().width;
 var navDrop3AWidth = document.getElementById("navDrop31").getBoundingClientRect().width;
 var navDrop4AWidth = document.getElementById("navDrop42").getBoundingClientRect().width;
+var navbar = document.querySelector(".navbar");
+var navbarImg = document.querySelector(".navbarImg");
+var navbarHeight = navbar.offsetTop;
 var mouseOverNavbar = false;
 var mouseOverNI00 = false; mouseOverNI01 = false; mouseOverNI1 = false; mouseOverNI2 = false; var mouseOverNI3 = false; var mouseOverNI4 = false; var mouseOverNI5 = false; var mouseOverNI6 = false; var mouseOverNI7 = false;
 var mouseOverND1 = false; var mouseOverND2 = false; var mouseOverND3 = false; var mouseOverND4 = false;
@@ -33,15 +36,18 @@ function clearMLND() {
     mouseLeaveND3 = false;
     mouseLeaveND4 = false;
 }
+function resetDropdowns() {
+    for (var index = 0; index < 4; index++) {
+        dropDC[index].style.top = `${document.querySelector(".navbarCC").getBoundingClientRect().height - dropDC[index].getBoundingClientRect().height}px`;
+        dropDC[index].style.transition = "top 2s";
+    }
+}
 
 $("#navDrop1").css("left", `${navItem2.left - ((navDrop1AWidth - navItem2.width) / 2)}px`);
 $("#navDrop2").css("left", `${navItem3.left - ((navDrop2AWidth - navItem3.width) / 2)}px`);
 $("#navDrop3").css("left", `${navItem4.left - ((navDrop3AWidth - navItem4.width) / 2)}px`);
 $("#navDrop4").css("left", `${navItem5.left - ((navDrop4AWidth - navItem5.width) / 2)}px`);
-for (var index = 0; index < 4; index++) {
-    dropDC[index].style.top = `${document.querySelector(".navbarCC").getBoundingClientRect().height - dropDC[index].getBoundingClientRect().height}px`;
-    dropDC[index].style.transition = "top 2s";
-}
+resetDropdowns();
 
 $("#navbarMainI").on("click", function() { window.location.href="index.html"; });
 $("#navbarMainT").on("click", function() { window.location.href="index.html"; });
@@ -122,20 +128,40 @@ $("body").on("mousemove", function () {
     if (!mouseOverNavbar && !mouseOverND1 && mouseLeaveND1) {
         sleep(1000);
         $("#navDrop1").css("top", `${document.querySelector(".navbarCC").getBoundingClientRect().height - dropDC[0].getBoundingClientRect().height}px`);
+        mouseLeaveND1 = false;
     }
     if (!mouseOverNavbar && !mouseOverND2 && mouseLeaveND2) {
         sleep(1000);
         $("#navDrop2").css("top", `${document.querySelector(".navbarCC").getBoundingClientRect().height - dropDC[1].getBoundingClientRect().height}px`);
+        mouseLeaveND2 = false;
     }
     if (!mouseOverNavbar && !mouseOverND3 && mouseLeaveND3) {
         sleep(1000);
         $("#navDrop3").css("top", `${document.querySelector(".navbarCC").getBoundingClientRect().height - dropDC[2].getBoundingClientRect().height}px`);
+        mouseLeaveND3 = false;
     }
     if (!mouseOverNavbar && !mouseOverND4 && mouseLeaveND4) {
         sleep(1000);
         $("#navDrop4").css("top", `${document.querySelector(".navbarCC").getBoundingClientRect().height - dropDC[3].getBoundingClientRect().height}px`);
+        mouseLeaveND4 = false;
     }
 });
+
+window.onscroll = function() {
+    console.log(document.querySelector(".navbarCC").getBoundingClientRect().height);
+    if (window.pageYOffset >= navbarHeight && window.pageYOffset != navbarHeight) {
+        resetDropdowns();
+        $(".bodyContent").css("top", `${document.querySelector(".navbarCC").getBoundingClientRect().height}px`);
+        navbar.classList.add("stickyNavbar");
+        navbarImg.style.height="48px";
+    }
+    else {
+        resetDropdowns();
+        $(".bodyContent").css("top", `${110}px`);
+        navbar.classList.remove("stickyNavbar");
+        navbarImg.style.height="80px";
+    }
+};
 /*End of navbar code*/
 /*Start of footer code*/
 $("#socialIcon1").on("mouseenter", function () {
