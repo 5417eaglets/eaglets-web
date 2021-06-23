@@ -378,3 +378,62 @@ body {
 .cBoxBtn2 {
     background-color:white;
 }
+/*start of styles first used on the become a volunteer page*/
+.contentInfoTxt {
+    color:black;
+    text-align:center;
+    width:100%;
+    font-size:84px;
+    font-weight:700;
+    padding:40px 0px;
+}
+/*start of styles first used on the become a sponsor page*/
+.btnLink {
+    text-decoration:none;
+    color:black;
+}
+.contentBtn:hover, .btnLink:hover {
+    text-decoration:none;
+    color:white;
+}
+.formIframe {
+    width:100%;
+    height:80vh;
+}
+/*start of styles first used on the contact us page*/
+.socialBanner {
+    width:100%;
+    padding:26px;
+    border-radius:50px;
+    background-color:#1A8AEC;
+}
+.socialBanner:hover {
+    background-color:#1179d4;
+}
+.socialBannerS {
+    display:grid;
+    grid-template-columns:90% 10%;
+    align-content:center;
+    width:100%;
+}
+.socialTxt {
+    color:white;
+    text-align:left;
+    font-size:40px;
+    font-weight:700;
+    width:100%;
+}
+.socialImgS {
+    width:auto;
+    height:130px;
+}
+.endJustify {
+    display:grid;
+    grid-template-columns:auto;
+    justify-content:end;
+    width:100%;
+}
+/*start of styles first used on the student portal page*/
+.blueText {
+    color:#1A8AEC;
+}
