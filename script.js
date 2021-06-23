@@ -58,6 +58,20 @@ $("#navDrop42").on("click", function() { window.location.href="robotics-at-home.
 $("#navItem6").on("click", function() { window.location.href="contact-us.html"; });
 $("#portalBtn").on("click", function() { window.location.href="student-portal.html"; });
 
+$("#indexBtn1").on("click", function() { window.location.href="programs.html"; });
+$("#indexBtn2").on("click", function() { window.location.href="become-a-volunteer.html"; });
+$("#indexBtn3").on("click", function() { window.location.href="become-a-sponsor.html"; });
+$("#aboutUsBtn1").on("click", function() { window.location.href="programs.html"; });
+$("#aboutUsBtn2").on("click", function() { window.location.href="leadership.html"; });
+$("#aboutTheKitsBtn1").on("click", function() { window.location.href="programs.html"; });
+$("#aboutTheKitsBtn2").on("click", function() { window.location.href="leadership.html"; });
+$("#leadershipBtn1").on("click", function() { window.location.href="about-the-kits.html"; });
+$("#leadershipBtn2").on("click", function() { window.location.href="programs.html"; });
+$("#programsBtn1").on("click", function() { window.location.href="summer-camp-2021.html"; });
+$("#programsBtn2").on("click", function() { window.location.href="about-the-kits.html"; });
+$("#summerCamp2021Btn1").on("click", function() { window.location.href="contact-us.html"; });
+$("#summerCamp2021Btn2").on("click", function() { window.location.href="leadership.html"; });
+
 $(".navbarCC").on("mouseover", function () { mouseOverNavbar = true; });
 $(".navbarCC").on("mouseout", function () { mouseOverNavbar = false; });
 $("#navbarMainI").on("mouseover", function () { mouseOverNI00 = true; });
