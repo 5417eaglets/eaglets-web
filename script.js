@@ -43,6 +43,21 @@ for (var index = 0; index < 4; index++) {
     dropDC[index].style.transition = "top 2s";
 }
 
+$("#navbarMainI").on("click", function() { window.location.href="index.html"; });
+$("#navbarMainT").on("click", function() { window.location.href="index.html"; });
+$("#navItem1").on("click", function() { window.location.href="index.html"; });
+$("#navDrop11").on("click", function() { window.location.href="about-us.html"; });
+$("#navDrop12").on("click", function() { window.location.href="about-the-kits.html"; });
+$("#navDrop13").on("click", function() { window.location.href="leadership.html"; });
+$("#navDrop21").on("click", function() { window.location.href="programs.html"; });
+$("#navDrop22").on("click", function() { window.location.href="summer-camp-2021.html"; });
+$("#navDrop31").on("click", function() { window.location.href="become-a-volunteer.html"; });
+$("#navDrop32").on("click", function() { window.location.href="become-a-sponsor.html"; });
+$("#navDrop41").on("click", function() { window.location.href="calendar.html"; });
+$("#navDrop42").on("click", function() { window.location.href="robotics-at-home.html"; });
+$("#navItem6").on("click", function() { window.location.href="contact-us.html"; });
+$("#portalBtn").on("click", function() { window.location.href="student-portal.html"; });
+
 $(".navbarCC").on("mouseover", function () { mouseOverNavbar = true; });
 $(".navbarCC").on("mouseout", function () { mouseOverNavbar = false; });
 $("#navbarMainI").on("mouseover", function () { mouseOverNI00 = true; });

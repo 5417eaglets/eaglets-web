@@ -392,9 +392,11 @@ body {
     text-decoration:none;
     color:black;
 }
+.contentBtn:hover {
+    color:white;
+}
 .contentBtn:hover, .btnLink:hover {
     text-decoration:none;
-    color:white;
 }
 .formIframe {
     width:100%;
