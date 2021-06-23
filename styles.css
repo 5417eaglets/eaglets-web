@@ -356,3 +356,25 @@ body {
 .profilePosition {
     margin-top:10px;
 }
+/*start of styles first used on the summer camp 2021 page*/
+.cBoxMarginB {
+    margin-bottom:56px;
+}
+.cBoxMarginB2 {
+    margin-bottom:16px;
+}
+.contentBox ul {
+    list-style-type:none;
+}
+.contentBox ul li:before {
+    content:"• ";
+    font-size:20pt;
+}
+.contentBox ul li {
+    padding:0;
+    margin-top:4px;
+    margin-bottom:4px;
+}
+.cBoxBtn2 {
+    background-color:white;
+}
