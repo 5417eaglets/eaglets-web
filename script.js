@@ -9,8 +9,9 @@ var navDrop2AWidth = document.getElementById("navDrop21").getBoundingClientRect(
 var navDrop3AWidth = document.getElementById("navDrop31").getBoundingClientRect().width;
 var navDrop4AWidth = document.getElementById("navDrop42").getBoundingClientRect().width;
 var navbar = document.querySelector(".navbar");
+var mobileNavbar = document.querySelector(".mobileNavbar");
 var navbarImg = document.querySelector(".navbarImg");
-var navbarHeight = navbar.offsetTop;
+var navbarHeight;
 var mouseOverNavbar = false;
 var mouseOverNI00 = false; mouseOverNI01 = false; mouseOverNI1 = false; mouseOverNI2 = false; var mouseOverNI3 = false; var mouseOverNI4 = false; var mouseOverNI5 = false; var mouseOverNI6 = false; var mouseOverNI7 = false;
 var mouseOverND1 = false; var mouseOverND2 = false; var mouseOverND3 = false; var mouseOverND4 = false;
@@ -42,6 +43,13 @@ function resetDropdowns() {
         dropDC[index].style.transition = "top 1s";
     }
 }
+if ($(".navbar").css("display") == "none") {
+    navbarHeight = mobileNavbar.offsetTop;
+}
+else {
+    navbarHeight = navbar.offsetTop;
+}
+
 
 $("#navDrop1").css("left", `${navItem2.left - ((navDrop1AWidth - navItem2.width) / 2)}px`);
 $("#navDrop2").css("left", `${navItem3.left - ((navDrop2AWidth - navItem3.width) / 2)}px`);
@@ -148,18 +156,19 @@ $("body").on("mousemove", function () {
 });
 
 window.onscroll = function() {
-    console.log(document.querySelector(".navbarCC").getBoundingClientRect().height);
     if (window.pageYOffset >= navbarHeight && window.pageYOffset != navbarHeight) {
         resetDropdowns();
         $(".bodyContent").css("top", `${document.querySelector(".navbarCC").getBoundingClientRect().height}px`);
         navbar.classList.add("stickyNavbar");
-        navbarImg.style.height="48px";
+        mobileNavbar.classList.add("stickyNavbar");
+        $(".navbarImg").css("height", "48px");
     }
     else {
         resetDropdowns();
         $(".bodyContent").css("top", `${110}px`);
         navbar.classList.remove("stickyNavbar");
-        navbarImg.style.height="80px";
+        mobileNavbar.classList.remove("stickyNavbar");
+        $(".navbarImg").css("height", "80px");
     }
 };
 /*End of navbar code*/
