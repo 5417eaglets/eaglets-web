@@ -43,13 +43,25 @@ function resetDropdowns() {
         dropDC[index].style.transition = "top 1s";
     }
 }
+function repositionFooter(btnOns) {
+    $('.footerC').css("position", "relative");
+    if (btnOns) {
+        sleep(50);
+        var vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+        var vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+        var elementOffset = $('.footer').offset().top;
+        var distance = (elementOffset) + $('.footer').outerHeight();
+        if ((vh - distance) >= 0) { $('.footer').css("position", "absolute"); $('.footer').css("bottom", "0px"); }
+    }
+}
+
 if ($(".navbar").css("display") == "none") {
     navbarHeight = mobileNavbar.offsetTop;
 }
 else {
     navbarHeight = navbar.offsetTop;
 }
-
+repositionFooter(true);
 
 $("#navDrop1").css("left", `${navItem2.left - ((navDrop1AWidth - navItem2.width) / 2)}px`);
 $("#navDrop2").css("left", `${navItem3.left - ((navDrop2AWidth - navItem3.width) / 2)}px`);
@@ -57,34 +69,34 @@ $("#navDrop3").css("left", `${navItem4.left - ((navDrop3AWidth - navItem4.width)
 $("#navDrop4").css("left", `${navItem5.left - ((navDrop4AWidth - navItem5.width) / 2)}px`);
 resetDropdowns();
 
-$("#navbarMainI").on("click", function() { window.location.href="index.html"; });
-$("#navbarMainT").on("click", function() { window.location.href="index.html"; });
-$("#navItem1").on("click", function() { window.location.href="index.html"; });
-$("#navDrop11").on("click", function() { window.location.href="about-us.html"; });
-$("#navDrop12").on("click", function() { window.location.href="about-the-kits.html"; });
-$("#navDrop13").on("click", function() { window.location.href="leadership.html"; });
-$("#navDrop21").on("click", function() { window.location.href="programs.html"; });
-$("#navDrop22").on("click", function() { window.location.href="summer-camp-2021.html"; });
-$("#navDrop31").on("click", function() { window.location.href="become-a-volunteer.html"; });
-$("#navDrop32").on("click", function() { window.location.href="become-a-sponsor.html"; });
-$("#navDrop41").on("click", function() { window.location.href="calendar.html"; });
-$("#navDrop42").on("click", function() { window.location.href="robotics-at-home.html"; });
-$("#navItem6").on("click", function() { window.location.href="contact-us.html"; });
-$("#portalBtn").on("click", function() { window.location.href="student-portal.html"; });
+$("#navbarMainI").on("click", function () { window.location.href = "index.html"; });
+$("#navbarMainT").on("click", function () { window.location.href = "index.html"; });
+$("#navItem1").on("click", function () { window.location.href = "index.html"; });
+$("#navDrop11").on("click", function () { window.location.href = "about-us.html"; });
+$("#navDrop12").on("click", function () { window.location.href = "about-the-kits.html"; });
+$("#navDrop13").on("click", function () { window.location.href = "leadership.html"; });
+$("#navDrop21").on("click", function () { window.location.href = "programs.html"; });
+$("#navDrop22").on("click", function () { window.location.href = "summer-camp-2021.html"; });
+$("#navDrop31").on("click", function () { window.location.href = "become-a-volunteer.html"; });
+$("#navDrop32").on("click", function () { window.location.href = "become-a-sponsor.html"; });
+$("#navDrop41").on("click", function () { window.location.href = "calendar.html"; });
+$("#navDrop42").on("click", function () { window.location.href = "robotics-at-home.html"; });
+$("#navItem6").on("click", function () { window.location.href = "contact-us.html"; });
+$("#portalBtn").on("click", function () { window.location.href = "student-portal.html"; });
 
-$("#indexBtn1").on("click", function() { window.location.href="programs.html"; });
-$("#indexBtn2").on("click", function() { window.location.href="become-a-volunteer.html"; });
-$("#indexBtn3").on("click", function() { window.location.href="become-a-sponsor.html"; });
-$("#aboutUsBtn1").on("click", function() { window.location.href="programs.html"; });
-$("#aboutUsBtn2").on("click", function() { window.location.href="leadership.html"; });
-$("#aboutTheKitsBtn1").on("click", function() { window.location.href="programs.html"; });
-$("#aboutTheKitsBtn2").on("click", function() { window.location.href="leadership.html"; });
-$("#leadershipBtn1").on("click", function() { window.location.href="about-the-kits.html"; });
-$("#leadershipBtn2").on("click", function() { window.location.href="programs.html"; });
-$("#programsBtn1").on("click", function() { window.location.href="summer-camp-2021.html"; });
-$("#programsBtn2").on("click", function() { window.location.href="about-the-kits.html"; });
-$("#summerCamp2021Btn1").on("click", function() { window.location.href="contact-us.html"; });
-$("#summerCamp2021Btn2").on("click", function() { window.location.href="leadership.html"; });
+$("#indexBtn1").on("click", function () { window.location.href = "programs.html"; });
+$("#indexBtn2").on("click", function () { window.location.href = "become-a-volunteer.html"; });
+$("#indexBtn3").on("click", function () { window.location.href = "become-a-sponsor.html"; });
+$("#aboutUsBtn1").on("click", function () { window.location.href = "programs.html"; });
+$("#aboutUsBtn2").on("click", function () { window.location.href = "leadership.html"; });
+$("#aboutTheKitsBtn1").on("click", function () { window.location.href = "programs.html"; });
+$("#aboutTheKitsBtn2").on("click", function () { window.location.href = "leadership.html"; });
+$("#leadershipBtn1").on("click", function () { window.location.href = "about-the-kits.html"; });
+$("#leadershipBtn2").on("click", function () { window.location.href = "programs.html"; });
+$("#programsBtn1").on("click", function () { window.location.href = "summer-camp-2021.html"; });
+$("#programsBtn2").on("click", function () { window.location.href = "about-the-kits.html"; });
+$("#summerCamp2021Btn1").on("click", function () { window.location.href = "contact-us.html"; });
+$("#summerCamp2021Btn2").on("click", function () { window.location.href = "leadership.html"; });
 
 $(".navbarCC").on("mouseover", function () { mouseOverNavbar = true; });
 $(".navbarCC").on("mouseout", function () { mouseOverNavbar = false; });
@@ -155,7 +167,7 @@ $("body").on("mousemove", function () {
     }
 });
 
-window.onscroll = function() {
+window.onscroll = function () {
     if (window.pageYOffset >= navbarHeight && window.pageYOffset != navbarHeight) {
         resetDropdowns();
         $(".bodyContent").css("top", `${document.querySelector(".navbarCC").getBoundingClientRect().height}px`);
