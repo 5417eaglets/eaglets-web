@@ -148,6 +148,7 @@ body {
 }
 .cBoxTxt {
     text-align:justify;
+    /*text-align:left !important;*/
     margin-top:15px;
     padding:0;
     font-size:30px;
@@ -671,6 +672,9 @@ body {
     .footerC {
         grid-template-columns:auto auto auto auto;
         width:92%;
+    }
+    .cBoxTxt {
+        text-align:left !important;
     }
 }
 @media (max-width: 1066px) {
