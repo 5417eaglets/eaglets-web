@@ -953,3 +953,57 @@ body {
         padding-bottom:20px !important;
     }
 }
+@media (max-width: 415px) {
+    #navbarMainTM {
+        font-size:24px;
+    }
+    .navbarImg {
+        height:56px;
+    }
+    .cBoxTitle {
+        font-size:24px;
+    }
+    .cBoxTxt {
+        font-size:16px !important;
+        line-height:22px;
+    }
+    .contentTxt2 {
+        font-size:28px;
+    }
+    .contentTxt {
+        line-height:20px !important;
+        font-size:18px !important;
+    }
+    #aboutUsBTxt2 { 
+        font-size:20px;
+    }
+    .profile {
+        height:auto;
+    }
+    #sumcamp2021BTxt {
+        font-size:19px;
+    }
+    #summerCamp2021Btn1 {
+        padding:10px !important;
+        font-size:20px !important;
+        width:200px !important;
+    }
+    .contentInfoTxt {
+        font-size:40px;
+    }
+    .socialTxt {
+        font-size:13.7px;
+    }
+    .socialImgS {
+        width:auto;
+        height:40px;
+    }
+    .socialBannerC {
+        padding:10px !important;
+    }
+}
+@media (max-width: 360px) {
+    #navbarMainTM {
+        font-size:20px;
+    }
+}
