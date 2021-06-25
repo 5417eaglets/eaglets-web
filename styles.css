@@ -61,6 +61,7 @@ body {
     transition:height 1s; 
 }
 #navbarMainT, #navbarMainTM {
+    text-align:left;
     font-size:30px;
     font-weight:700;
 }
@@ -569,6 +570,11 @@ body {
     }
     #profile3 {
         margin-right:70px;
+    }
+}
+@media (max-width: 1586px) {
+    #indexB2Txt {
+        padding-left:50px;
     }
 }
 @media (max-width: 1101px) {
