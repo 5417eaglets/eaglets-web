@@ -60,11 +60,11 @@ body {
     margin-right:auto;
     transition:height 1s; 
 }
-#navbarMainT {
+#navbarMainT, #navbarMainTM {
     font-size:30px;
     font-weight:700;
 }
-#navbarMainT:hover, #navItem7:hover {
+#navbarMainT:hover, #navbarMainTM:hover, #navItem7:hover {
     color:black;
 }
 #navItem2:hover, #navItem3:hover, #navItem4:hover, #navItem5:hover {
@@ -447,6 +447,9 @@ body {
     color:#1A8AEC;
 }
 /*RWD-related styling*/
+.show {
+    display:block !important;
+}
 .mobileNavbar {
     display:none;
 }
@@ -463,6 +466,66 @@ body {
 #navbarMenuIcon {
     grid-column:9 / 10;
     font-size:40px;
+}
+.mobileMenuCC {
+    display:none;
+    user-select:none;
+    position:absolute;
+    top:110px;
+    right:0px;
+    z-index:99;
+    width:100%;
+    height:100%;
+}
+.mobileMenuC {
+    display:grid;
+    grid-template-columns:40% 60%;
+    width:100%;
+    height:90%;
+}
+.mobileMenu {
+    background-color:rgba(68,183,239,0.7);
+    color:black;
+    border-top:2px solid black;
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+.mobileMenuItem {
+    height:auto;
+    width:100%;
+    background-color:white;
+    padding:20px;
+    font-size:24px;
+    color:black;
+    font-weight:700;
+    text-align:center;
+    border-bottom:1px solid black;
+    margin-bottom:2px;
+}
+.mobileMenuItem:hover {
+    color:#1A8AEC;
+    cursor:pointer;
+}
+.mobileMenuDropdown {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    width:100%;
+    display:none;
+}
+.mobileMenuDropdown li {
+    text-align:center;
+    width:100%;
+    margin:0;
+    padding:14px;
+    font-weight:700;
+    font-size:20px;
+    background-color:#44b7ef;
+    border-bottom:1px solid black;
+}
+.mobileMenuDropdown li:hover {
+    background-color:#15C8EC;
+    cursor:pointer;
 }
 #aboutTheKitsCT2 {
     color:white;
@@ -714,6 +777,11 @@ body {
     .formIframe {
         width:90vw;
         margin-left:-16%;
+    }
+}
+@media (max-width: 700px) {
+    .mobileMenuC {
+        grid-template-columns:0% 100%;
     }
 }
 @media (max-width: 683px) {

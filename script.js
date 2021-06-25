@@ -17,6 +17,7 @@ var mouseOverNI00 = false; mouseOverNI01 = false; mouseOverNI1 = false; mouseOve
 var mouseOverND1 = false; var mouseOverND2 = false; var mouseOverND3 = false; var mouseOverND4 = false;
 var mouseLeaveND1 = false; var mouseLeaveND2 = false; var mouseLeaveND3 = false; var mouseLeaveND4 = false;
 var mouseLeaveNI2 = false; var mouseLeaveNI3 = false; var mouseLeaveNI4 = false; var mouseLeaveNI5 = false;
+var scrollState = false;
 
 function sleep(milliseconds) {
     const date = Date.now();
@@ -54,7 +55,13 @@ function repositionFooter(btnOns) {
         if ((vh - distance) >= 0) { $('.footer').css("position", "absolute"); $('.footer').css("bottom", "0px"); }
     }
 }
-
+function toggleNavbarMenuIcon() {
+    $(".mobileMenuCC").toggleClass("show");
+    $("#navbarMenuIcon i").toggleClass("fas");
+    $("#navbarMenuIcon i").toggleClass("fa-bars");
+    $("#navbarMenuIcon i").toggleClass("far");
+    $("#navbarMenuIcon i").toggleClass("fa-times-circle");
+}
 if ($(".navbar").css("display") == "none") {
     navbarHeight = mobileNavbar.offsetTop;
 }
@@ -70,19 +77,39 @@ $("#navDrop4").css("left", `${navItem5.left - ((navDrop4AWidth - navItem5.width)
 resetDropdowns();
 
 $("#navbarMainI").on("click", function () { window.location.href = "index.html"; });
+$("#navbarMainIM").on("click", function () { window.location.href = "index.html"; });
 $("#navbarMainT").on("click", function () { window.location.href = "index.html"; });
+$("#navbarMainTM").on("click", function () { window.location.href = "index.html"; });
 $("#navItem1").on("click", function () { window.location.href = "index.html"; });
+$("#mmItem1").on("click", function () { window.location.href = "index.html"; });
 $("#navDrop11").on("click", function () { window.location.href = "about-us.html"; });
+$("#mmItem2D1").on("click", function () { window.location.href = "about-us.html"; });
 $("#navDrop12").on("click", function () { window.location.href = "about-the-kits.html"; });
+$("#mmItem2D2").on("click", function () { window.location.href = "about-the-kits.html"; });
 $("#navDrop13").on("click", function () { window.location.href = "leadership.html"; });
+$("#mmItem2D3").on("click", function () { window.location.href = "leadership.html"; });
 $("#navDrop21").on("click", function () { window.location.href = "programs.html"; });
+$("#mmItem3D1").on("click", function () { window.location.href = "programs.html"; });
 $("#navDrop22").on("click", function () { window.location.href = "summer-camp-2021.html"; });
+$("#mmItem3D2").on("click", function () { window.location.href = "summer-camp-2021.html"; });
 $("#navDrop31").on("click", function () { window.location.href = "become-a-volunteer.html"; });
+$("#mmItem4D1").on("click", function () { window.location.href = "become-a-volunteer.html"; });
 $("#navDrop32").on("click", function () { window.location.href = "become-a-sponsor.html"; });
+$("#mmItem4D2").on("click", function () { window.location.href = "become-a-sponsor.html"; });
 $("#navDrop41").on("click", function () { window.location.href = "calendar.html"; });
+$("#mmItem5D1").on("click", function () { window.location.href = "calendar.html"; });
 $("#navDrop42").on("click", function () { window.location.href = "robotics-at-home.html"; });
+$("#mmItem5D2").on("click", function () { window.location.href = "robotics-at-home.html"; });
 $("#navItem6").on("click", function () { window.location.href = "contact-us.html"; });
+$("#mmItem6").on("click", function () { window.location.href = "contact-us.html"; });
 $("#portalBtn").on("click", function () { window.location.href = "student-portal.html"; });
+$("#mmItem7").on("click", function () { window.location.href = "student-portal.html"; });
+
+$("#navbarMenuIcon").on("click", function () { toggleNavbarMenuIcon(); });
+$("#mmItem2").on("click", function () { $("#mmItem2D").toggleClass("show"); });
+$("#mmItem3").on("click", function () { $("#mmItem3D").toggleClass("show"); });
+$("#mmItem4").on("click", function () { $("#mmItem4D").toggleClass("show"); });
+$("#mmItem5").on("click", function () { $("#mmItem5D").toggleClass("show"); });
 
 $("#indexBtn1").on("click", function () { window.location.href = "programs.html"; });
 $("#indexBtn2").on("click", function () { window.location.href = "become-a-volunteer.html"; });
@@ -170,14 +197,28 @@ $("body").on("mousemove", function () {
 window.onscroll = function () {
     if (window.pageYOffset >= navbarHeight && window.pageYOffset != navbarHeight) {
         resetDropdowns();
-        $(".bodyContent").css("top", `${document.querySelector(".navbarCC").getBoundingClientRect().height}px`);
+        if (!scrollState) {
+            scrollState = true;
+            toggleNavbarMenuIcon();
+        }
+        var navbarCCHeight;
+        if (document.querySelector(".navbarCC").getBoundingClientRect().height == "0") {
+            navbarCCHeight = document.querySelector("#mobileNavbarCC").getBoundingClientRect().height;
+        }
+        else {
+            navbarCCHeight = document.querySelector(".navbarCC").getBoundingClientRect().height;
+        }
+        $(".bodyContent").css("top", `${navbarCCHeight}px`);
+        $(".mobileMenuCC").css("top", `${navbarCCHeight}px`);
         navbar.classList.add("stickyNavbar");
         mobileNavbar.classList.add("stickyNavbar");
         $(".navbarImg").css("height", "48px");
     }
     else {
+        if (scrollState) { scrollState = false; }
         resetDropdowns();
         $(".bodyContent").css("top", `${110}px`);
+        $(".mobileMenuCC").css("top", `${110}px`);
         navbar.classList.remove("stickyNavbar");
         mobileNavbar.classList.remove("stickyNavbar");
         $(".navbarImg").css("height", "80px");
